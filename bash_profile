@@ -1,13 +1,15 @@
-alias waterloo='ssh jx5liu@linux.student.cs.uwaterloo.ca'
+alias waterloo='ssh yxbzhang@linux.student.cs.uwaterloo.ca'
 alias bashrc='source .bash_profile'
 
 alias py3='python3'
 alias py2='python'
 
-alias vim='mvim -v'
+# Get __git_ps1 from MacOS
+source /Library/Developer/CommandLineTools/usr/share/git-core/git-completion.bash
+source /Library/Developer/CommandLineTools/usr/share/git-core/git-prompt.sh
 
 # Change Prompt
-export PS1="\w : \h (\u) \n>>> " 
+export PS1='\n\[\e[1;37m\][\[\e[1;32m\]\u\[\e[0;39m\]@\[\e[1;36m\]\h\[\e[0;39m\]:\[\e[1;33m\]\w\[\e[0;39m\]\[\e[1;35m\]$(__git_ps1 " (%s)")\[\e[0;39m\] \[\e[1;37m\]]\[\e[0;39m\] $ '
 export PS2="  > "
 
 # Colors
@@ -25,6 +27,7 @@ alias ..='cd ../'                           # Go back 1 directory level
 alias ...='cd ../../'                       # Go back 2 directory levels
 alias ~="cd ~"                              # ~:            Go Home
 alias c='clear'                             # c:            Clear terminal display
+alias vim='vim'
 
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------
