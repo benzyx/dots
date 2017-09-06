@@ -29,6 +29,9 @@ alias ~="cd ~"                              # ~:            Go Home
 alias c='clear'                             # c:            Clear terminal display
 alias vim='vim'
 
+# C++14 shortcut
+alias g++14='g++ -std=c++14'
+
 #   lr:  Full Recursive Directory Listing
 #   ------------------------------------------
 alias lr='ls -R | grep ":$" | sed -e '\'s/:$//'\'' -e '\''s/[^-][^\/]*\//--/g'\'' -e '\''s/^/   /'\'' -e '\''s/-/|/'\'' | less'
